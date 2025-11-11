@@ -1,0 +1,41 @@
+<dashboard>
+  <label>Welcome to the Request App</label>
+
+  <row>
+    <panel>
+      <html>
+        <h2>How to Use the <code>| req</code> Command</h2>
+
+        <p>
+          The <code>| req</code> command lets you make HTTP or HTTPS requests directly from Splunk searches.
+          You can use it in the <b>Search &amp; Reporting</b> app or any other search view.
+        </p>
+
+        <h3>Examples</h3>
+        <pre>
+| req url="https://api.github.com"
+| req url="https://api.example.com/data" method=POST data="{\"foo\": \"bar\"}"
+        </pre>
+
+        <h3>Optional Parameters</h3>
+        <ul>
+          <li><b>url</b>: Request URL</li>
+          <li><b>method</b>: HTTP method (GET, POST, PUT, DELETE)</li>
+          <li><b>headers</b>: JSON object of request headers</li>
+          <li><b>data</b>: Request body (for POST/PUT)</li>
+          <li><b>verify</b>: true/false to enable or disable SSL verification</li>
+          <li><b>identity</b> / <b>realm</b>: For stored Splunk credentials</li>
+        </ul>
+
+        <h3>Usage</h3>
+        <p>
+          Open the <b>Search &amp; Reporting</b> app and run any of the examples above in the search bar.
+        </p>
+
+        <p style="margin-top:20px;">
+          <i>Tip:</i> You can combine <code>| req</code> with other commands to process API results directly in Splunk.
+        </p>
+      </html>
+    </panel>
+  </row>
+</dashboard>
